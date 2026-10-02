@@ -639,6 +639,20 @@ body {
   margin-bottom: 0.4rem;
 }
 
+.skill-badge {
+  display: inline-block;
+  background: rgba(108, 99, 255, 0.15);
+  border: 1.5px solid var(--clr-primary);
+  color: var(--clr-primary-h);
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 15px rgba(108, 99, 255, 0.2);
+}
+
 #res-message {
   color: var(--clr-muted);
   font-size: 0.97rem;

@@ -63,6 +63,8 @@ const resIcon         = document.getElementById("res-icon");
 const btnRestart      = document.getElementById("btn-restart");
 const btnChooseLevel  = document.getElementById("btn-choose-level");
 const btnHome         = document.getElementById("btn-home");
+const skillRating     = document.getElementById("skill-rating");
+const skillRatingText = document.getElementById("skill-rating-text");
 
 // ── Home → Level Select ───────────────────────────────────────
 btnStart.addEventListener("click", () => showScreen("level"));
@@ -228,6 +230,26 @@ function submitQuiz(timeout = false) {
 
   resMessage.textContent = timeout ? "Time's up! " + message : message;
   resIcon.textContent    = icon;
+
+  // Calculate Skill Rating
+  let rating = "";
+  if (percent >= 80) {
+    if (state.selectedLevel === 1) rating = "Fresher Ready \u2B50";
+    else if (state.selectedLevel === 2) rating = "Junior Developer \u2B50\u2B50";
+    else if (state.selectedLevel === 3) rating = "Mid-Level Developer \u2B50\u2B50\u2B50";
+    else if (state.selectedLevel === 4) rating = "Senior Developer \u2B50\u2B50\u2B50\u2B50";
+    else if (state.selectedLevel === 5) rating = "FAANG Material \u2B50\u2B50\u2B50\u2B50\u2B50";
+    else if (state.selectedLevel === 0) rating = "Full Stack Master \u2B50\u2B50\u2B50\u2B50\u2B50";
+  } else if (percent >= 50) {
+    rating = "Promising Candidate \uD83D\uDC68\u200D\uD83D\uDCBB";
+  } else {
+    rating = "Needs Practice \uD83D\uDCDA";
+  }
+
+  if (skillRating && skillRatingText) {
+    skillRatingText.textContent = rating;
+    skillRating.style.display = "inline-block";
+  }
 
   animateScoreRing(percent);
   showScreen("result");
