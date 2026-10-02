@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Online Quiz Application — MNC Interview Questions from TCS to Google." />
+  <title>Online Quiz Application</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       SCREEN 1 — HOME
+  ═══════════════════════════════════════════════════════ -->
+  <section id="screen-home" class="screen active">
+    <div class="home-wrapper">
+
+      <div class="home-badge">
+        <span class="dot"></span>
+        College Project &mdash; CS Department
+      </div>
+
+      <h1 class="home-title">Online Quiz<br />Application</h1>
+
+      <p class="home-subtitle">
+        Practice real MNC interview questions asked at
+        <strong>TCS, Infosys, Wipro, Amazon &amp; Google</strong>.
+        Choose your level and beat the clock!
+      </p>
+
+      <div class="stats-row">
+        <div class="stat-pill"><span class="pill-icon">&#127823;</span> 150 Questions</div>
+        <div class="stat-pill"><span class="pill-icon">&#128310;</span> 5 Levels</div>
+        <div class="stat-pill"><span class="pill-icon">&#9201;</span> 30 Mins/Level</div>
+        <div class="stat-pill"><span class="pill-icon">&#127962;</span> TCS to Google</div>
+      </div>
+
+      <button id="btn-start" class="btn-primary">
+        <span>&#128640;</span> Start Quiz
+      </button>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       SCREEN 2 — LEVEL SELECTION
+  ═══════════════════════════════════════════════════════ -->
+  <section id="screen-level" class="screen">
+    <div class="level-select-wrapper">
+
+      <h2 class="level-select-title">&#128310; Choose Your Level</h2>
+      <p class="level-select-sub">Pick a difficulty to practice, or play all 10 questions together.</p>
+
+      <div class="level-cards-grid">
+
+        <button class="level-card" data-level="1">
+          <div class="lc-stars" style="color:#22c55e">&#11088;&#10032;&#10032;&#10032;&#10032;</div>
+          <div class="lc-badge" style="background:rgba(34,197,94,0.15);border-color:#22c55e;color:#22c55e">Level 1</div>
+          <div class="lc-title">Basic</div>
+          <div class="lc-company">&#127962; TCS / Infosys</div>
+          <div class="lc-desc">Compiler, OS &mdash; Fresher round</div>
+          <div class="lc-count">30 Questions</div>
+        </button>
+
+        <button class="level-card" data-level="2">
+          <div class="lc-stars" style="color:#84cc16">&#11088;&#11088;&#10032;&#10032;&#10032;</div>
+          <div class="lc-badge" style="background:rgba(132,204,22,0.15);border-color:#84cc16;color:#84cc16">Level 2</div>
+          <div class="lc-title">Easy</div>
+          <div class="lc-company">&#127962; Wipro / Accenture</div>
+          <div class="lc-desc">OOP pillars, Pointers in C</div>
+          <div class="lc-count">30 Questions</div>
+        </button>
+
+        <button class="level-card" data-level="3">
+          <div class="lc-stars" style="color:#f59e0b">&#11088;&#11088;&#11088;&#10032;&#10032;</div>
+          <div class="lc-badge" style="background:rgba(245,158,11,0.15);border-color:#f59e0b;color:#f59e0b">Level 3</div>
+          <div class="lc-title">Medium</div>
+          <div class="lc-company">&#127962; Capgemini / Cognizant</div>
+          <div class="lc-desc">Process vs Thread, Normalization</div>
+          <div class="lc-count">30 Questions</div>
+        </button>
+
+        <button class="level-card" data-level="4">
+          <div class="lc-stars" style="color:#f97316">&#11088;&#11088;&#11088;&#11088;&#10032;</div>
+          <div class="lc-badge" style="background:rgba(249,115,22,0.15);border-color:#f97316;color:#f97316">Level 4</div>
+          <div class="lc-title">Hard</div>
+          <div class="lc-company">&#127962; Amazon / Microsoft</div>
+          <div class="lc-desc">Deadlock, BST Complexity</div>
+          <div class="lc-count">30 Questions</div>
+        </button>
+
+        <button class="level-card" data-level="5">
+          <div class="lc-stars" style="color:#ef4444">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+          <div class="lc-badge" style="background:rgba(239,68,68,0.15);border-color:#ef4444;color:#ef4444">Level 5</div>
+          <div class="lc-title">Advanced</div>
+          <div class="lc-company">&#127962; Google / FAANG</div>
+          <div class="lc-desc">CAP Theorem, Sorting Big-O</div>
+          <div class="lc-count">30 Questions</div>
+        </button>
+
+        <button class="level-card level-card-all" data-level="0">
+          <div class="lc-stars" style="color:#8b82ff">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+          <div class="lc-badge" style="background:rgba(108,99,255,0.15);border-color:#6c63ff;color:#8b82ff">All</div>
+          <div class="lc-title">All Levels</div>
+          <div class="lc-company">&#127962; TCS &rarr; Google</div>
+          <div class="lc-desc">All 150 questions, Basic to Advanced</div>
+          <div class="lc-count">150 Questions</div>
+        </button>
+
+      </div>
+
+      <button id="btn-back-home" class="btn-outline" style="margin-top:1.5rem">
+        &larr; Back to Home
+      </button>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       SCREEN 3 — QUIZ
+  ═══════════════════════════════════════════════════════ -->
+  <section id="screen-quiz" class="screen">
+
+    <div class="quiz-header">
+      <div class="q-meta">
+        <span id="q-number">Question 1 of 30</span>
+        <span id="q-category">Computer Science</span>
+      </div>
+      <div id="timer-ring">
+        <span class="timer-icon">&#9201;</span>
+        <span id="timer-display">30:00</span>
+      </div>
+    </div>
+
+    <div class="level-row">
+      <span id="q-level" class="q-level-badge">Level 1 &mdash; Basic</span>
+      <span id="q-level-stars" class="q-level-stars">&#11088;&#10032;&#10032;&#10032;&#10032;</span>
+    </div>
+
+    <div class="progress-track">
+      <div id="progress-bar" style="width:10%"></div>
+    </div>
+
+    <div id="question-card">
+      <span id="q-company" class="q-company-tag"></span>
+      <p id="q-text">Loading question...</p>
+    </div>
+
+    <div class="options-grid">
+      <button class="option-btn" id="opt-A" data-key="A">
+        <span class="opt-label">A</span><span class="opt-text">Option A</span>
+      </button>
+      <button class="option-btn" id="opt-B" data-key="B">
+        <span class="opt-label">B</span><span class="opt-text">Option B</span>
+      </button>
+      <button class="option-btn" id="opt-C" data-key="C">
+        <span class="opt-label">C</span><span class="opt-text">Option C</span>
+      </button>
+      <button class="option-btn" id="opt-D" data-key="D">
+        <span class="opt-label">D</span><span class="opt-text">Option D</span>
+      </button>
+    </div>
+
+    <div class="nav-row">
+      <button id="btn-prev" class="btn-nav" disabled>&larr; Previous</button>
+      <button id="btn-next" class="btn-nav">Next &rarr;</button>
+      <button id="btn-submit" class="btn-submit" style="display:none">&#10004; Submit Quiz</button>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       SCREEN 4 — RESULT
+  ═══════════════════════════════════════════════════════ -->
+  <section id="screen-result" class="screen">
+    <div class="result-card">
+
+      <div class="result-icon-wrap"><span id="res-icon">&#127942;</span></div>
+      <h2 class="result-title">Quiz Complete!</h2>
+      <p id="res-message">Here are your results.</p>
+
+      <div class="score-ring-wrap">
+        <svg class="score-ring-svg" width="130" height="130" viewBox="0 0 130 130" aria-hidden="true">
+          <circle cx="65" cy="65" r="54" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="8"/>
+          <circle id="score-circle" cx="65" cy="65" r="54"/>
+        </svg>
+        <div class="score-ring-inner">
+          <span class="ring-percent" id="res-percent">0%</span>
+          <span class="ring-label">Score</span>
+        </div>
+      </div>
+
+      <div class="result-stats">
+        <div class="stat-box total"><div class="stat-val" id="res-total">-</div><div class="stat-lbl">Total Questions</div></div>
+        <div class="stat-box correct"><div class="stat-val" id="res-correct">-</div><div class="stat-lbl">Correct</div></div>
+        <div class="stat-box wrong"><div class="stat-val" id="res-wrong">-</div><div class="stat-lbl">Wrong</div></div>
+        <div class="stat-box score"><div class="stat-val" id="res-score">-</div><div class="stat-lbl">Final Score</div></div>
+      </div>
+
+      <div class="result-actions">
+        <button id="btn-restart" class="btn-primary"><span>&#128260;</span> Play Again</button>
+        <button id="btn-choose-level" class="btn-outline">&#128310; Choose Level</button>
+        <button id="btn-home" class="btn-outline">&#127968; Go Home</button>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="js/questions.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>
